@@ -5,10 +5,11 @@ int ft_toupper(int c)
     else
         return (c);
 }
-
+/*
 #include <stdio.h>
 #include <ctype.h>
 int main()
 {
     printf ("dyalhoom = %c  dyali = %c",toupper('s'),ft_toupper('A'));
 }
+*/
