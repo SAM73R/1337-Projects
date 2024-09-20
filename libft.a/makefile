@@ -1,10 +1,21 @@
+NAME=libft.a
+CC=gcc
+FLAGS= -Wall -Wextra -Werror
+SOURCE=ft_atoi.c ft_isalnum.c  ft_isascii.c  ft_isprint.c ft_strrchr.c  ft_toupper.c strlcpy.c
+OBJECT=$(SOURCE:.c=.o)
+AR= ar rcs 
 
-msg :
-	@echo "welcome to make world"
+all: $(NAME)
 
-run :	msg
-	@gcc main.c -o s.run
-	@./s.run
+$(NAME):$(OBJECT)
+	$(AR) $(NAME) $(OBJECT)
+%.o: %.c
+	$(CC) $(FLAGS) -c $< -o $@
+clean:
+	rm -f $(OBJECT)
+fclean: clean
+	rm -f $(NAME)
+re: fclean all
+.PHONY: all fclean clean re
 
-rm :
-	@rm *n
+#$< -o $@ compile kola wahed bohdo 

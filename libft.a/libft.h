@@ -1,4 +1,8 @@
-#ifndef _SIZE_T_DEF_
-typedef unsigned int size_t;
-#define _SIZE_T_DEF_
+
+#ifndef LIBFT_H
+#include <unistd.h>
+#include <stdlib.h>
+int ft_atoi(const char *str);
+
+#define LIBFT_H
 #endif

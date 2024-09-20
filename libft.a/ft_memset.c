@@ -3,7 +3,7 @@
 void *ft_memset(void *s, int c, size_t n)
 {
     unsigned char    *ptr;
-    int x;
+    size_t x;
 
     x = 0;
     ptr = s;
@@ -20,9 +20,14 @@ void *ft_memset(void *s, int c, size_t n)
 #include <stdio.h>
 int main ()
 {
-    char x[] ="hell";
-    char y[] ="hell";
+    char y[] ="helloo";
+    char x[] ="helloo";
     
-    printf ("X = %s\n",ft_memset(x,'1',5));
-    printf ("Y = %s",memset(y,'1',5));
+   /* printf ("x = %s -adress x = %p\n",memset(x,'1',4),y);
+    printf ("y = %s -adress y = %p",ft_memset(y,'1',4),x);*/
+
+    printf ("x = %s -adress x = %p",memset(x,'1',8),x);
+    printf ("\ny = %s -adress y = %p\n",ft_memset(y,'1',8),y);
+    
+   
 }
