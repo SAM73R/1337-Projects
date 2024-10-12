@@ -3,16 +3,21 @@ int len(char *str)
     int i;
     
     i = 0;
-    while (str[i++])
+    while (str[i])
+    {
+        i++;
+    }
     return (i);
 }
 
-char    *ft_strcat(char *src, char *dest, int n)
+char    *ft_strlcat(char *src, char *dest, int n)
 {
-    int slen;
     int dlen;
     int i;
 
-    slen = len(src);
-    
+    dlen = len(dest);
+    i = 0;
+    while (src[i] && i < n)
+        dest[dlen++] = src[i++]; 
+    return (dest);   
 }
